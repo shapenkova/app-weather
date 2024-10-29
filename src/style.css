@@ -154,3 +154,38 @@ input, button {
 .weather .weather-bg__img.bg {
   opacity: 1;
 }
+
+.weather.sunny .weather-bg__img:not(.sunny) {
+  opacity: 0;
+}
+.weather.sunny .weather-bg__img.sunny {
+  opacity: 1;
+}
+
+.weather.overcast .weather-bg__img:not(.overcast) {
+  opacity: 0;
+}
+.weather.overcast .weather-bg__img.overcast {
+  opacity: 1;
+}
+
+.weather.partly-cloudy .weather-bg__img:not(.partly-cloudy) {
+  opacity: 0;
+}
+.weather.partly-cloudy .weather-bg__img.partly-cloudy {
+  opacity: 1;
+}
+
+.weather.light-snow .weather-bg__img:not(.light-snow) {
+  opacity: 0;
+}
+.weather.light-snow .weather-bg__img.light-snow {
+  opacity: 1;
+}
+
+.weather.light-rain .weather-bg__img:not(.light-rain) {
+  opacity: 0;
+}
+.weather.light-rain .weather-bg__img.light-rain {
+  opacity: 1;
+}
