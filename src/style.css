@@ -4,7 +4,7 @@
   --font: "Karla", sans-serif;
   --accent: #12C0DD;
   --accent-rgb: 18, 192, 221;
-  --light: #FFFFFF;
+  --light: #efefef;
   --border-radius: 10px;
   --width-line: 2px;
   --tr: .3s;
@@ -42,7 +42,7 @@ input, button {
   height: 100%;
   overflow: hidden;
 }
-.container {
+.weather__container {
   box-sizing: border-box;
   display: grid;
   grid-template-columns: 1fr 100px 200px;
@@ -68,7 +68,7 @@ input, button {
     padding: 5px 10px;
   }
 }
-.weather-form {
+.form {
   display: flex;
   align-items: stretch;
   gap: 20px;
@@ -76,7 +76,7 @@ input, button {
     flex-direction: column;
   }
 }
-.weather-form__input {
+.form__input {
   box-sizing: border-box;
   flex-grow: 1;
   padding: 10px 15px;
@@ -85,11 +85,11 @@ input, button {
   font-size: 20px;
   transition: var(--tr);
 }
-.weather-form__input:focus {
+.form__input:focus {
   outline: none;
   border-color: var(--accent);
 }
-.weather-form__btn {
+.form__btn {
   box-sizing: border-box;
   padding: 10px 15px;
   background-color: rgba(var(--accent-rgb), .3);
@@ -99,20 +99,20 @@ input, button {
   cursor: pointer;
   transition: var(--tr);
 }
-.weather-form__btn:hover {
+.form__btn:hover {
   background-color: var(--accent);
 }
-.weather-form,
-.weather-load,
-.weather-info {
+.form,
+.weather__load,
+.weather__info {
   grid-column: 1 / 4;
 }
-.weather-load {
+.weather__load {
   display: flex;
   align-items: center;
   height: 87px;
 }
-.weather-info__text {
+.weather__info-text {
   display: grid;
   grid-template-columns: 1fr auto auto;
   gap: 20px;
@@ -123,7 +123,7 @@ input, button {
     font-size: 30px;
   }
 }
-.weather-bg {
+.weather__bg {
   position: absolute;
   left: 0;
   right: 0;
@@ -134,13 +134,13 @@ input, button {
   z-index: -1;
 }
 
-.weather-bg > div {
+.weather__bg > div {
   width: 100%;
   height: 100%;
   position: relative;
   overflow: hidden;
 }
-.weather-bg__img {
+.weather__bg-img {
   width: 100%;
   height: 100%;
   position: absolute;
@@ -151,41 +151,41 @@ input, button {
   opacity: 0;
   transition: var(--tr) ease-in-out;
 }
-.weather .weather-bg__img.bg {
+.weather .weather__bg-img.bg {
   opacity: 1;
 }
 
-.weather.sunny .weather-bg__img:not(.sunny) {
+.weather.sunny .weather__bg-img:not(.sunny) {
   opacity: 0;
 }
-.weather.sunny .weather-bg__img.sunny {
+.weather.sunny .weather__bg-img.sunny {
   opacity: 1;
 }
 
-.weather.overcast .weather-bg__img:not(.overcast) {
+.weather.overcast .weather__bg-img:not(.overcast) {
   opacity: 0;
 }
-.weather.overcast .weather-bg__img.overcast {
+.weather.overcast .weather__bg-img.overcast {
   opacity: 1;
 }
 
-.weather.partly-cloudy .weather-bg__img:not(.partly-cloudy) {
+.weather.partly-cloudy .weather__bg-img:not(.partly-cloudy) {
   opacity: 0;
 }
-.weather.partly-cloudy .weather-bg__img.partly-cloudy {
+.weather.partly-cloudy .weather__bg-img.partly-cloudy {
   opacity: 1;
 }
 
-.weather.light-snow .weather-bg__img:not(.light-snow) {
+.weather.light-snow .weather__bg-img:not(.light-snow) {
   opacity: 0;
 }
-.weather.light-snow .weather-bg__img.light-snow {
+.weather.light-snow .weather__bg-img.light-snow {
   opacity: 1;
 }
 
-.weather.light-rain .weather-bg__img:not(.light-rain) {
+.weather.light-rain .weather__bg-img:not(.light-rain) {
   opacity: 0;
 }
-.weather.light-rain .weather-bg__img.light-rain {
+.weather.light-rain .weather__bg-img.light-rain {
   opacity: 1;
 }
